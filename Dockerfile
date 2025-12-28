@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install Node/npm for TypeScript, plus Python deps.
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends nodejs npm git \
+  && apt-get install -y --no-install-recommends nodejs npm git openssh-client vim-tiny \
   && npm install -g typescript \
   && rm -rf /var/lib/apt/lists/*
 
