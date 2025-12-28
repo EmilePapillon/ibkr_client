@@ -1,0 +1,7 @@
+{
+  "name": "My Dev Environment",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  }
+}

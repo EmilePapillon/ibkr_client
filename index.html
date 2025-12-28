@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IBKR Snapshot (TypeScript demo)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div id="login-shell" class="card auth-card hidden">
+      <h2>Sign in to IBKR backend</h2>
+      <p class="muted">Your credentials stay on this machine; cookie is set on success.</p>
+      <label class="label" for="login-user">Username</label>
+      <input id="login-user" type="text" autocomplete="username" value="alice" />
+      <label class="label" for="login-pass">Password</label>
+      <input id="login-pass" type="password" autocomplete="current-password" value="secret" />
+      <button id="login-btn">Login</button>
+      <p class="status-text" id="login-status"></p>
+    </div>
+
+    <div id="app-shell" class="hidden">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Interactive Brokers inspired</p>
+          <h1>Portfolio pulse</h1>
+          <p class="lede">Tiny TypeScript-only page showing a portfolio snapshot with live filtering.</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="badge">TS demo</div>
+          <button id="logout-btn" class="ghost">Logout</button>
+        </div>
+      </header>
+
+      <section class="summary" id="summary">
+        <div class="card">
+          <p class="label">Portfolio value</p>
+          <p class="big" id="portfolio-value">$0</p>
+          <p class="muted" id="positions-count"></p>
+        </div>
+        <div class="card">
+          <p class="label">Today's P&amp;L</p>
+          <p class="big" id="pnl-today">$0</p>
+          <p class="muted" id="pnl-note"></p>
+        </div>
+        <div class="card">
+          <p class="label">Top mover</p>
+          <p class="big" id="top-mover">–</p>
+          <p class="muted">Based on intraday change</p>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div>
+          <label for="search" class="label">Filter positions</label>
+          <input id="search" name="search" type="search" placeholder="Search by symbol or name" />
+        </div>
+        <div class="hint">
+          Data comes from the backend once authenticated.
+          <button id="reload-btn" class="ghost small">Reload data</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card stretch">
+          <div class="card-header">
+            <div>
+              <p class="label">Positions</p>
+              <h2>Live list</h2>
+            </div>
+            <div class="pill" id="filter-pill">All symbols</div>
+          </div>
+          <div id="positions" class="list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="./dist/main.js" defer></script>
+</body>
+</html>

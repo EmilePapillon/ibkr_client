@@ -1,0 +1,26 @@
+# Build artifacts
+dist/
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Python bytecode and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ENV/
+
+# Runtime files and logs
+logs/
+run/
+*.pid
+
+# Environment/config
+.env
+.env.*
+
+# OS files
+.DS_Store
