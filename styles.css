@@ -88,6 +88,10 @@ h1 {
   margin-bottom: 16px;
 }
 
+.charts {
+  margin: 12px 0 10px;
+}
+
 .card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.04);
@@ -272,6 +276,76 @@ button {
   padding: 6px 10px;
   border-radius: 12px;
   font-weight: 600;
+}
+
+.pill-soft {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text);
+}
+
+.chart {
+  position: relative;
+  min-height: 260px;
+  width: 100%;
+}
+
+.chart-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tab-group {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 8px 12px;
+  margin: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #6cf0c2, #5bc0f8);
+  color: #0c111b;
+}
+
+.horizon-group {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 2px;
+  gap: 4px;
+}
+
+.horizon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 6px 9px;
+  margin: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-size: 13px;
+}
+
+.horizon-btn.active {
+  background: rgba(108, 240, 194, 0.18);
+  color: var(--text);
 }
 
 .activity .feed {

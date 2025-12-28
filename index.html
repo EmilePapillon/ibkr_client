@@ -50,6 +50,32 @@
         </div>
       </section>
 
+      <section class="charts">
+        <div class="card chart-card">
+          <div class="card-header">
+            <div>
+              <p class="label">Portfolio charts</p>
+              <h2>Value & performance</h2>
+            </div>
+            <div class="chart-actions">
+              <div class="horizon-group" aria-label="Time horizon">
+                <button class="horizon-btn" data-horizon="1D">1D</button>
+                <button class="horizon-btn" data-horizon="1W">1W</button>
+                <button class="horizon-btn active" data-horizon="1M">1M</button>
+                <button class="horizon-btn" data-horizon="YTD">YTD</button>
+              </div>
+              <div class="tab-group">
+                <button class="tab active" data-tab="value">Value</button>
+                <button class="tab" data-tab="performance">Performance</button>
+              </div>
+              <div class="pill pill-soft" id="chart-change">--</div>
+            </div>
+          </div>
+          <p class="muted" id="chart-note">Trailing month view</p>
+          <div id="chart-main" class="chart"></div>
+        </div>
+      </section>
+
       <section class="controls">
         <div>
           <label for="search" class="label">Filter positions</label>
@@ -76,6 +102,7 @@
     </div>
   </div>
 
+  <script src="./vendor/plotly.min.js"></script>
   <script type="module" src="./dist/main.js" defer></script>
 </body>
 </html>
